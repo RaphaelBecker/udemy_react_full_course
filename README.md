@@ -28,4 +28,5 @@ The sections are splitted into branches to keep the setup clean.
 
 Create new local branch: `git branch <new-branch>` \
 Switch to local branch: `git checkout <new-branch>` \
-Push local branch to remote: `git push -u origin <local-branch>`
+Push local branch to remote: `git push -u origin <local-branch>` \
+Delete local branch: `git branch -d <local-branch>`
