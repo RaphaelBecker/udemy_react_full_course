@@ -19,3 +19,8 @@ The sections are splitted into branches to keep the setup clean.
 ### Install routing:
 
 `npm install --save react-router-dom@5`
+
+### Git:
+
+Create new local branch: `git brach <new-branch>` \
+Push local branch to remote: `git push -u origin <local-branch>`
