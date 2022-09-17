@@ -12,7 +12,7 @@ The sections are splitted into branches to keep the setup clean.
 
 `npx create-react-app my-app`
 
-### Install project
+### Install project:
 
 `npm install`
 
@@ -26,5 +26,6 @@ The sections are splitted into branches to keep the setup clean.
 
 ### Git:
 
-Create new local branch: `git checkout <new-branch>` \
+Create new local branch: `git branch <new-branch>` \
+Switch to local branch: `git checkout <new-branch>` \
 Push local branch to remote: `git push -u origin <local-branch>`
