@@ -1,4 +1,6 @@
-// array of meetup objects:
+import MeetupList from "../components/meetups/MeetupList";
+
+// array of meetup objects (jsx elements):
 const DUMMY_DATA = [
   {
     id: "m1",
@@ -21,8 +23,8 @@ const DUMMY_DATA = [
 ];
 
 // transform the array of objects into an array of renderable <li> objects:
-const listItems = DUMMY_DATA.map((meetup) => (
-  <li key={meetup.id}>{meetup.title}</li>
+const meetupsList = DUMMY_DATA.map((meetup) => (
+  <li key={meetup.id}> {meetup.title} </li>
 ));
 
 // render the transforemd list onto the AllMeetupsPage by interpolation
@@ -30,7 +32,7 @@ function AllMeetupsPage() {
   return (
     <section>
       <h1>All Meetups:</h1>
-      <ul> {listItems} </ul>
+      <MeetupList meetups={DUMMY_DATA} />
     </section>
   );
 }
