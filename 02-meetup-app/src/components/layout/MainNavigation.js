@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 
+// Scoped css style file only for MainNavigation component.
+// CSS-style classes can now be accessed in our directives by className={}
+import classes from "./MainNavigation.module.css";
+
 function MainNavigation() {
   return (
-    <header>
-      <div>React Meetup</div>
+    <header className={classes.header}>
+      <div className={classes.logo}>React Meetup</div>
       <nav>
         <ul>
           <li>
