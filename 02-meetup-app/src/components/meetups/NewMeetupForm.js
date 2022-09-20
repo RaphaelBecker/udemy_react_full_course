@@ -2,7 +2,7 @@ import Card from "../ui/Card";
 import classes from "./NewMeetupForm.module.css";
 import { useRef } from "react";
 
-function NewMeetupForm() {
+function NewMeetupForm(props) {
   // create a reference variable and link it to title input box in the from
   const titleInputRef = useRef();
   const imageInputRef = useRef();
@@ -27,7 +27,7 @@ function NewMeetupForm() {
       description: enteredDescription,
     };
 
-    console.log(meetupData);
+    props.addMeetupData(meetupData);
   }
 
   return (
