@@ -24,12 +24,12 @@ function NewExpenseForm() {
   // prevent default behaviour: Reload page when submit button was pressed
   const submitHandler = (event) => {
     event.preventDefault();
-  };
-
-  const expenseData = {
-    title: enteredTitle,
-    amount: enteredAmount,
-    date: new Date(enteredDate),
+    const expenseData = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(enteredDate),
+    };
+    console.log(expenseData);
   };
 
   return (
