@@ -1,7 +1,8 @@
 import "./NewExpenseForm.css";
 import { useState } from "react";
 
-function NewExpenseForm() {
+function NewExpenseForm(props) {
+  // state:
   const [enteredTitle, setTitle] = useState("");
   const [enteredAmount, setAmount] = useState("");
   const [enteredDate, setDate] = useState("");
@@ -29,7 +30,10 @@ function NewExpenseForm() {
       amount: enteredAmount,
       date: new Date(enteredDate),
     };
-    console.log(expenseData);
+    // Passing data from child to parent component (Bottom-up):
+    // props attribute is linked (onSaveExpenseData={saveExpenseDataHandler}) in parent component via props (NewExpense.js):
+    props.onSaveExpenseData(expenseData);
+    // clear state after submit:
     setAmount("");
     setDate("");
     setTitle("");

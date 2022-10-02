@@ -24,10 +24,21 @@ function App() {
     },
   ];
 
+  const saveExpenseDataHandler = (enteredExpenseData) => {
+    const expenseData = {
+      ...enteredExpenseData,
+      id: Math.random().toString(),
+    };
+    // This log will shop up when onSaveExpenseData is called in child component as it is NewExpense bootom-up to App.js linked:
+    console.log(expenseData);
+  };
+
+  // binded bottom up from NewExpense to App via onSaveExpenseData={saveExpenseDataHandler}.
+  // -> If onSaveExpenseData is called in child (NewExpense), saveExpenseDataHandlerwill be called here
   return (
     <div>
       <h2>Let's get started!</h2>
-      <NewExpense></NewExpense>
+      <NewExpense onSaveExpenseData={saveExpenseDataHandler}></NewExpense>
       <Expenses expenses={expenses}></Expenses>
     </div>
   );
