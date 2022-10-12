@@ -28,7 +28,11 @@ function App() {
   const [currentExpenses, setExpenses] = useState(INITIAL_EXPENSES);
 
   const addExpenseHandler = (expense) => {
-    setExpenses([expense, ...expenses]);
+    // This is a clean way to update an array by state by using a previous snapshot of state:
+    // setExpenses takes a function as argument. react pics automatically prevExpenses
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
   };
 
   const saveExpenseDataHandler = (enteredExpenseData) => {
@@ -36,8 +40,8 @@ function App() {
       ...enteredExpenseData,
       id: Math.random().toString(),
     };
-    // This log will shop up when onSaveExpenseData is called in child component as it is NewExpense bootom-up to App.js linked:
-    console.log(expenseData);
+    // This log will show up when onSaveExpenseData is called in child component as it is NewExpense bootom-up to App.js linked:
+    console.log("This is App.js");
     addExpenseHandler(expenseData);
   };
 
@@ -47,7 +51,7 @@ function App() {
     <div>
       <h2>Let's get started!</h2>
       <NewExpense onSaveExpenseData={saveExpenseDataHandler}></NewExpense>
-      <Expenses expenses={currentExpenses}></Expenses>
+      <Expenses items={currentExpenses}></Expenses>
     </div>
   );
 }

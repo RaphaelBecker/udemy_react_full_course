@@ -21,7 +21,7 @@ function Expenses(props) {
           filterYear={filterYear}
         />
         <ul>
-          {props.expenses.map((expense) => (
+          {props.items.map((expense) => (
             <ExpenseItem
               date={expense.date}
               title={expense.title}
