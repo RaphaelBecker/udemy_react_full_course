@@ -27,7 +27,7 @@ function NewExpenseForm(props) {
     event.preventDefault();
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
     // Passing data from child to parent component (Bottom-up):
