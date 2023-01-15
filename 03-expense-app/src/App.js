@@ -55,7 +55,6 @@ const App = () => {
   // -> If onSaveExpenseData is called in child (NewExpense), saveExpenseDataHandlerwill be called here
   return (
     <div>
-      <h2>Let's get started!</h2>
       <NewExpense onSaveExpenseData={saveExpenseDataHandler}></NewExpense>
       <Expenses items={currentExpenses}></Expenses>
     </div>
