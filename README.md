@@ -25,6 +25,11 @@ The sections are splitted into branches to keep the setup clean.
 
 `npm install --save react-router-dom@5`
 
+### Install styled components (https://styled-components.com/)
+A additional package which makes it possible to build components where its style is only attached to itself, not shared with other components.
+
+`npm install --save styled-components`
+
 ### Git:
 
 Create new local branch: `git branch <new-branch>` \
