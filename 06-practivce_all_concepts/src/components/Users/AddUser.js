@@ -7,9 +7,11 @@ const AddUser = (props) => {
   const [enteredName, setenteredName] = useState("");
   const [enteredAge, setenteredAge] = useState("");
 
-  const addUserHandler = (event) => {
-    event.preventDefaut();
-    if (enteredName.trim().legth === 0 || enteredAge.trim().length === 0) {
+  const submitHandler = (event) => {
+    // prevent default behaviour: Reload page when submit button was pressed
+    event.preventDefault();
+
+    if (enteredName.trim().length === 0 || enteredAge.trim().length === 0) {
       return;
     }
     // "+" casts String to a number
@@ -19,11 +21,11 @@ const AddUser = (props) => {
 
     console.log(enteredName, enteredAge);
     const user = {
-      enteredName,
-      enteredAge,
+      userName: enteredName,
+      userAge: enteredAge,
     };
 
-    props.addUser(user);
+    props.onAddUser(user);
     setenteredName("");
     setenteredAge("");
   };
@@ -40,10 +42,10 @@ const AddUser = (props) => {
 
   return (
     <Card className={styles.input}>
-      <form onSubmit={addUserHandler}>
-        <label htmlFor="username">Username</label>
+      <form onSubmit={submitHandler}>
+        <label htmlFor="userName">Username</label>
         <input
-          id="username"
+          id="userName"
           type="text"
           // two way binding:
           value={enteredName}
@@ -51,7 +53,7 @@ const AddUser = (props) => {
         />
         <label htmlFor="age">Age (Years)</label>
         <input
-          id="age"
+          id="userAge"
           type="number"
           // two way binding:
           value={enteredAge}

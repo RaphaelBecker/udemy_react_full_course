@@ -24,7 +24,7 @@ function App() {
     // setExpenses takes a function as argument. react pics automatically prevUsers
     setUsers((prevUsers) => {
       console.log("This is App.js addUserHandler");
-      return [user, ...prevUsers];
+      return [...prevUsers, user];
     });
   };
 
@@ -40,8 +40,8 @@ function App() {
 
   return (
     <div>
-      <AddUser addUser={saveUserHandler} />
-      <UserList items={currentUsers} />
+      <AddUser onAddUser={saveUserHandler} />
+      <UserList users={currentUsers} />
     </div>
   );
 }
