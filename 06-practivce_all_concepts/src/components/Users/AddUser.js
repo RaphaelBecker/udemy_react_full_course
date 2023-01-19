@@ -1,4 +1,4 @@
-import React, { useState } from "react"; // useState Hook!
+import React, { useState, Fragment } from "react"; // useState Hook!
 import styles from "./AddUser.module.css";
 import Card from "../UI/Card";
 import Button from "../UI/Button";
@@ -55,7 +55,7 @@ const AddUser = (props) => {
   };
 
   return (
-    <div>
+    <Fragment>
       {currentError && (
         <ErrorModal
           onClearError={clearErrorState}
@@ -85,7 +85,7 @@ const AddUser = (props) => {
           <Button type="submit">Add User</Button>
         </form>
       </Card>
-    </div>
+    </Fragment>
   );
 };
 
