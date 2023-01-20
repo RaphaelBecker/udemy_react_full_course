@@ -44,7 +44,7 @@ const Login = (props) => {
     }
   );
 
-  /*  // ONLY for useEffect demo:
+  // ONLY for useEffect demo: --------------------------------
   // runs after every component render live cycle:
   useEffect(() => {
     console.log("useEffect execution: Every render live cylce");
@@ -57,6 +57,11 @@ const Login = (props) => {
   useEffect(() => {
     console.log("useEffect execution: on enteredEmail change");
   }, [emailState.value]);
+  //-----------------------------------------------------------
+
+  // optimize useEffect() by only givin the change dependency in ",[]" the only val which should be checked for at +++
+  const { isValid: emailIsValid } = emailState;
+  const { isValid: passwordIsValid } = enteredPasswordState;
 
   // useEffect is a hook for handling "side effects". Side effects are: HTTP requests, key strokes, etc. In genereal to
   // execute a function in response of some other action!
@@ -66,7 +71,7 @@ const Login = (props) => {
     // debounce user key stroke inout: only check after 500 ms when user stops typing for valid input to save conputing
     const identifier = setTimeout(() => {
       console.log("validation check run");
-      setFormIsValid(emailState.isValid && enteredPassword.trim().length > 6);
+      setFormIsValid(emailIsValid && passwordIsValid);
     }, 500);
     // clean up function before useEffect executes the above logic the next time! But not before the very first run.
     // Sets the timer for every key stroke to 0
@@ -74,13 +79,12 @@ const Login = (props) => {
       clearTimeout(identifier);
       console.log("restart debounce timer");
     };
-  }, [emailState.value, enteredPassword]);
-   */
+  }, [emailIsValid, passwordIsValid]); // +++
 
   const emailChangeHandler = (event) => {
     dispatchEmail({ type: "EMAIL_USER_INPUT", value: event.target.value });
 
-    setFormIsValid(emailState.isValid && enteredPasswordState.formIsValid);
+    setFormIsValid(emailIsValid && passwordIsValid);
   };
 
   const passwordChangeHandler = (event) => {
