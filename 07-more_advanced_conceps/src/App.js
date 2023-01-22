@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { Fragment, useContext } from "react";
 
 import Login from "./components/Login/Login";
 import Home from "./components/Home/Home";
@@ -6,48 +6,23 @@ import MainHeader from "./components/MainHeader/MainHeader";
 import AuthContext from "./store/auth-context";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const context = useContext(AuthContext);
 
-  // When useEffect executes? useEffect runs after the whole component was executed!
-  // useEffect(anonymous arrow function: ()=>{} which gets executed whenever the dependency changes, [Array of dependencies]):
-  // Explanantion: We do have an empty array of dependecies, therefor it will only run once at app start!
-  useEffect(() => {
-    const storedLoggedInUserInfo = localStorage.getItem("isLoggedIn");
-
-    if (storedLoggedInUserInfo === "LOGGED_IN") {
-      setIsLoggedIn(true);
-    }
-  }, []);
-
-  const loginHandler = (email, password) => {
-    // localStorage can be acceses in the Browser Dev Tools in Tab Application
-    localStorage.setItem("isLoggedIn", "LOGGED_IN");
-    // We should of course check email and password
-    // But it's just a dummy/ demo anyways
-    setIsLoggedIn(true);
-  };
-
-  const logoutHandler = () => {
-    setIsLoggedIn(false);
-    localStorage.removeItem("isLoggedIn");
-  };
-
+  // Context is only used when a state is shared across multiple components, usually props is still used
   // <React.Fragment> is no more needed as root level becaus of <AuthContext.Provider>
   // Everywhere the authentication inforamtion is needed: Wrap <AuthContext.Provider> around!
   // As AuthContext is not a React Component, we have to call <AuthContext.Provider> to make it a Component.
-
+  // AuthContext.Provider makes it possible to jump over multiple layers of Components
+  // WE do not exchange onLogin and onLogout in <Login> and <Logout> because the Handler are directly used in those Components, hence no need to jump
+  // across multiple layers
   return (
-    <AuthContext.Provider
-      value={{
-        isLoggedIn: isLoggedIn,
-      }}
-    >
-      <MainHeader onLogout={logoutHandler} />
+    <Fragment>
+      <MainHeader />
       <main>
-        {!isLoggedIn && <Login onLogin={loginHandler} />}
-        {isLoggedIn && <Home onLogout={logoutHandler} />}
+        {!context.isLoggedIn && <Login onLogin={context.onLogin} />}
+        {context.isLoggedIn && <Home onLogout={context.onLogout} />}
       </main>
-    </AuthContext.Provider>
+    </Fragment>
   );
 }
 
