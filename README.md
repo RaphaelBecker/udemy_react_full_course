@@ -42,16 +42,16 @@ Delete local branch: `git branch -d <local-branch>`
 ## Preview of all apps which has been build during this course:
 
 ### first app:
-![](https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/01-first_app.gif | width=100)
+![](https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/01-first_app.gif)
 
 ### meetup-app:
-![](https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/02-meetup-app.PNG | width=100)
+![](https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/02-meetup-app.PNG)
 
 ### expense-app:
-![](https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/03-expense-app.gif | width=100)
+![](https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/03-expense-app.gif)
 
 ### dynamic-styling:
-![](https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/04-dynamic-styling.gif | width=100)
+![](https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/04-dynamic-styling.gif)
 
 ### authentication:
-![](https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/07-advanced-concepts.gif | width=100)
+![](https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/07-advanced-concepts.gif)
