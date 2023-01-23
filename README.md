@@ -42,16 +42,16 @@ Delete local branch: `git branch -d <local-branch>`
 ## Preview of all apps which has been build during this course: (600px <->)
 
 ### first app:
-<img align="left" height="300px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/01-first-app.gif">  
+<img align="center" height="300px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/01-first-app.gif">  
 
 ### meetup-app:
-<img align="left" height="300px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/02-meetup-app.PNG">  
+<img align="center" height="300px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/02-meetup-app.PNG">  
 
 ### expense-app: 
-<img align="left" height="300px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/03-expense-app.gif">  
+<img align="center" height="300px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/03-expense-app.gif">  
 
 ### dynamic-styling:
-<img align="left" height="300px" src="(https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/04-dynamic-styling.gif">  
+<img align="center" height="300px" src="(https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/04-dynamic-styling.gif">  
 
 ### authentication:
-<img align="left" height="300px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/07-advanced-concepts.gif">  
+<img align="center" height="300px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/07-advanced-concepts.gif">  
