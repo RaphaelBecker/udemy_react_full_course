@@ -41,17 +41,17 @@ Delete local branch: `git branch -d <local-branch>`
 
 ## Preview of all apps which has been build during this course: (600px <->)
 
-### first app:
+### 1. first app:
 <img align="center" height="300px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/01-first-app.gif">  
 
-### meetup-app:
+### 2. meetup-app:
 <img align="center" height="400px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/02-meetup-app.PNG">  
 
-### expense-app: 
+### 3. expense-app: 
 <img align="center" height="400px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/03-expense-app.gif">  
 
-### dynamic-styling:
+### 4. dynamic-styling:
 <img align="center" height="380px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/04-dynamic-styling.gif">  
 
-### authentication:
+### 5. authentication:
 <img align="center" height="280px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/07-advanced-concepts.gif">  
