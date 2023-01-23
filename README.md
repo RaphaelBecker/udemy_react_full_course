@@ -48,10 +48,10 @@ Delete local branch: `git branch -d <local-branch>`
 <img align="center" height="400px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/02-meetup-app.PNG">  
 
 ### expense-app: 
-<img align="center" height="410px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/03-expense-app.gif">  
+<img align="center" height="400px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/03-expense-app.gif">  
 
 ### dynamic-styling:
-<img align="center" height="420px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/04-dynamic-styling.gif">  
+<img align="center" height="400px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/04-dynamic-styling.gif">  
 
 ### authentication:
 <img align="center" height="300px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/07-advanced-concepts.gif">  
