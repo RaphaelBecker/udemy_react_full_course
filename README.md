@@ -39,7 +39,7 @@ Switch to local branch: `git checkout <new-branch>` \
 Push local branch to remote: `git push -u origin <local-branch>` \
 Delete local branch: `git branch -d <local-branch>`
 
-## Preview of all apps which has been build during this course: (600px <->)
+## Preview of all apps which has been build during this course:
 
 ### 1. first app:
 <img align="center" height="300px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/01-first-app.gif">  
