@@ -44,7 +44,7 @@ Delete local branch: `git branch -d <local-branch>`
 ### first app:
 ![](https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/01-first-app.gif)
 
-<img align="left" height="300px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/01-first-app.gif" /
+<img align="left" height="300px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/01-first-app.gif">
 
 ### meetup-app:
 ![](https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/02-meetup-app.PNG)
