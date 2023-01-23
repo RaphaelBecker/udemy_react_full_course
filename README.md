@@ -42,6 +42,7 @@ Delete local branch: `git branch -d <local-branch>`
 ## Preview of all apps which has been build during this course:
 
 ### first app:
+![](https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/01-first_app.gif)
 
 ### meetup-app:
 
