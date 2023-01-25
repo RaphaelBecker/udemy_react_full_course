@@ -1,4 +1,6 @@
 import classes from "./AvailableMeals.module.css";
+import Card from "./../UI/Card";
+import MealItem from "./MealItem/MealItem";
 
 const DUMMY_MEALS = [
   {
@@ -28,17 +30,23 @@ const DUMMY_MEALS = [
 ];
 
 const AvailableMeals = () => {
-  const meals_list = DUMMY_MEALS.map((meal) => <li>{meal.name}</li>);
+  const meals_list = DUMMY_MEALS.map((meal) => (
+    <MealItem
+      id={meal.id}
+      key={meal.id}
+      titel={meal.name}
+      description={meal.description}
+      price={meal.price}
+    />
+  ));
 
-  if (meals_list.length === 0) {
-    return <h2> No meals selected</h2>;
-  } else {
-    return (
-      <section className={classes.meals}>
-        <ul>{meals_list}</ul>;
-      </section>
-    );
-  }
+  return (
+    <section className={classes.meals}>
+      <Card>
+        <ul>{meals_list}</ul>
+      </Card>
+    </section>
+  );
 };
 
 export default AvailableMeals;
