@@ -7,12 +7,9 @@ const HeaderCartButton = (props) => {
   const context = useContext(CartContext);
 
   // Number of all items which are ordered by the user. Every Item can be ordered more than 1 time, thats why we have to sum up like:
-  const numberOfCartItems = context.totalAmount.reduce(
-    (currentNumber, item) => {
-      return currentNumber + item.amount;
-    },
-    0
-  );
+  const numberOfCartItems = context.items.reduce((currentNumber, item) => {
+    return currentNumber + item.amount;
+  }, 0);
 
   function openCartHandler() {
     props.onOpenCard();
