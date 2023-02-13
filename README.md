@@ -55,3 +55,6 @@ Delete local branch: `git branch -d <local-branch>`
 
 ### 5. authentication:
 <img align="center" height="280px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/07-advanced-concepts.gif">  
+
+### 6. food app:
+<img align="center" height="280px" src="https://github.com/RaphaelBecker/udemy_react_full_course/blob/main/previews/08-food-app.gif">  
